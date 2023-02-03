@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Commerce | Blogs</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+   </head>
+    <body>
+
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="index.html"><img src="insert.jpg" width="150"></a>
+            </div>
+            <div class="nav_side">
+            
+            <a href="about.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href=" ">Login/Register</a>
+            </div>
+        </nav>
+
+        <div class="blog" style="padding-top: 100px;">
+            <h2>Blogs</h2>
+            <div class="blog_container" style="padding-bottom: 50px;">
+                <div class="item">
+                    <div class="item_img">
+                        <img src="10.jpg">
+                    </div>
+                    
+                </div>
+                <div class="item_content">
+                    <p>Today, a powerful volcanic eruption in the Tonga archipelago set off tsunami advisories across the Pacific Ocean, including the West Coast of the U.S.  As I write this blog, it is too early to know if any effects will be observed in our country</p>
+                    <P>The islands of Tonga, numbering 170, lie in the southwest Pacific Ocean and are grouped in two parallel chains that trend north to south.  The chains are divided by the Tonga Trench, where the Pacific Plate is dipping beneath the Australian Plate.  Islands of the western chain are the product of subduction volcanism; the leading edge of the subducting Pacific Plate melts as it approaches the mantle, igniting the volcanoes that form the western chain.  This morning's eruption was of a volcano that had not yet risen above sea level (it had not yet produced a visible island).</P>
+                    <p>The eastern chain of the Tonga archipelago does not include active volcanoes since they do not lie over a volcanic hotspot, an active oceanic ridge or along a subduction zone.  However, some of these islands contain volcanic rock from the Eocene Period (50 million years ago); the ancient volcanoes formed elsewhere and traveled westward on the Pacific Plate.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="feed">
+            <h2>Write a review</h2>
+            <div class="feed_form">
+                <form name="submit-googlesheet" method="post">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_logo">
+                <a href="index.html"><img src="insert.jpg" width="150"></a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="about.html">About Us</a>|
+                <a href="service.html">Services</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="login.html">Login</a>|
+                <a href="">Sign Up</a>
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms of Use</a>|
+                <a href="">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/hashinsert/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>    
+            </div>
+            <div class="contact">
+                <h3>Contact us</h3>
+                <a href="https://api.whatsApp.com/send?phone=+919876543210" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="tel: +919876543210"><i class="fa fa-mobile" aria-hidden="true"></i></a>
+                <a href="mailto: support@#insert.ai"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2023 #insert. All rights reserved</p>
+</footer>
+
+<script type="text/javaScript">
+const scriptURL =
+'https://script.google.com/macros/s/AKfycby4z6rI2IoDZu7DHIb7xoiMsq1HBQdH4JKivFSN5KmAJL6UWT8YB3wQSPMq6iz_9fSifA/exec'
+const form = document.forms['submit-googlesheet']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => alert(
+        "Thanks for you valuable feedback!!!"))
+    .catch(error => console.error('Error!', error.message))
+})
+
+</script>
+</body>
+</html>
